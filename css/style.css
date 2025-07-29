@@ -1,6 +1,6 @@
 /* --- Contenedor Principal --- */
 .signature-container {
-  background-image: url('../assets/fondonew.jpeg'); /* <-- URL DE TU IMAGEN AQUÍ */
+  background-image: url('../assets/fondonew.jpeg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
@@ -72,7 +72,7 @@
   display: inline-block;
 }
 
-/* --- Columna de Logo y Foto --- */
+/*  Columna de Logo y Foto  */
 .photo-column {
   width: 150px;
   text-align: center;
@@ -102,7 +102,7 @@
   display: block;
 }
 
-/* --- Estilos COMUNES para AMBAS barras (izquierda y derecha) --- */
+/* barras izquierda y derecha */
 .profile-pic-wrapper::before,
 .profile-pic-wrapper::after {
   content: '';
@@ -176,7 +176,7 @@
     padding: 0;
   }
 
-  /* Asignamos el orden específico que deseas */
+  /*orden específico*/
   .photo-column { order: 1; }
   .info-column { order: 2; }
   .contact-column { order: 3; }
@@ -194,7 +194,7 @@
     justify-content: center;
   }
 
-  /* --- Posicionamiento del Logo en la Esquina --- */
+  /*Posicionamiento del Logo en la Esquina*/
   .logo-img {
     position: absolute;   
     bottom: 25px;        
