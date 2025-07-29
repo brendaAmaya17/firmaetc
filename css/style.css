@@ -10,6 +10,9 @@
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   padding: 20px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
 }
 
 .content-table {
@@ -24,22 +27,26 @@
 
 /* --- Columna de Información Personal --- */
 .info-column {
-  width: 200px;
+  width: 1px;
   vertical-align: middle;
   color: #ffffff;
-
+  padding-left: 35px;
+  margin-top: 40px; 
+}
+.info-column, .contact-column {
+  flex-basis: 33%; 
 }
 .name {
   margin: 0;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
 }
 .name-highlight {
   color: #ff45cc;
 }
 .title {
-  margin: 5px 0 15px;
-  font-size: 10px;
+  margin: 0 0 15px;
+  font-size: 11px;
   letter-spacing: 1px;
 }
 
@@ -56,7 +63,7 @@
 
 /* --- Separador Vertical --- */
 .separator-container {
-  width: 30px;
+  width: 250px;
   text-align: center;
 }
 .separator {
@@ -71,13 +78,8 @@
   text-align: center;
   vertical-align: middle;
 }
-.logo {
-  position: absolute;
-  bottom: 9px;
-  left: 30px;
-  width: 60px;
-  display: block;
-}
+
+
 .profile-pic-wrapper {
   width: 161px;
   position: relative;
@@ -93,6 +95,12 @@
   display: block;
 
 }
+.logo-img {
+  width: 60px;    
+  height: auto;  
+  margin-top: 38px;
+  display: block;
+}
 
 /* --- Estilos COMUNES para AMBAS barras (izquierda y derecha) --- */
 .profile-pic-wrapper::before,
@@ -105,7 +113,7 @@
   z-index: -1; 
   background-color: #ff45cc;
   border-radius: 8px;
-  box-shadow: 0 0 12px #ff45cc;
+  box-shadow: 0 0 25px #fdb1e9;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -126,7 +134,7 @@
   padding-left: 15px;
 }
 .contact-details {
-  font-size: 13px;
+  font-size: 14px;
 }
 .contact-details a {
   text-decoration: none;
@@ -143,4 +151,56 @@
 .contact-details td {
   vertical-align: middle;
   padding-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+
+  .signature-container {
+    flex-direction: column; 
+    align-items: center;    
+    padding: 40px 20px; 
+  }
+  .separator-container {
+    display: none; 
+  }
+  .photo-column,
+  .info-column,
+  .contact-column {
+    /* Reordenamiento */
+    order: 1; 
+    width: 100%;           
+    max-width: 320px;      
+    margin-bottom: 1px;  
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Asignamos el orden específico que deseas */
+  .photo-column { order: 1; }
+  .info-column { order: 2; }
+  .contact-column { order: 3; }
+
+  .social-icons {
+    margin: 0 auto 10px; 
+  }
+  
+  .contact-column {
+    order: 3;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* --- Posicionamiento del Logo en la Esquina --- */
+  .logo-img {
+    position: absolute;   
+    bottom: 25px;        
+    left: 25px;           
+    width: 60px;        
+    margin: 0;
+    z-index: 10;
+  }
 }
