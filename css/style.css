@@ -27,7 +27,7 @@
   width: 200px;
   vertical-align: middle;
   color: #ffffff;
-  
+
 }
 .name {
   margin: 0;
@@ -49,7 +49,7 @@
   height: 15px;
 }
 .social-icons  {
-  padding-right: 5;
+  padding: -2px;
   border-radius: 30px;
   background-color: #ff45cc;
 }
