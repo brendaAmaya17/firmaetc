@@ -1,0 +1,146 @@
+/* --- Contenedor Principal --- */
+.signature-container {
+  background-image: url('../assets/fondonew.jpeg'); /* <-- URL DE TU IMAGEN AQUÍ */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.content-table {
+  width: 100%;
+}
+/* --- Fuente Personalizada --- */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+/* --- Columna de Información Personal --- */
+.info-column {
+  width: 200px;
+  vertical-align: middle;
+  color: #ffffff;
+  
+}
+.name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.name-highlight {
+  color: #ff45cc;
+}
+.title {
+  margin: 5px 0 15px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* --- Iconos de Redes Sociales --- */
+.social-icons img {
+  width: 15px;
+  height: 15px;
+}
+.social-icons  {
+  padding-right: 5;
+  border-radius: 30px;
+  background-color: #ff45cc;
+}
+
+/* --- Separador Vertical --- */
+.separator-container {
+  width: 30px;
+  text-align: center;
+}
+.separator {
+  border-left: 3px solid #ff45cc;
+  height: 100px;
+  display: inline-block;
+}
+
+/* --- Columna de Logo y Foto --- */
+.photo-column {
+  width: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+.logo {
+  position: absolute;
+  bottom: 9px;
+  left: 30px;
+  width: 60px;
+  display: block;
+}
+.profile-pic-wrapper {
+  width: 161px;
+  position: relative;
+  display: inline-block;
+  position: relative;
+  z-index: 1; 
+}
+
+.profile-pic {
+  width: 161px;
+  border-radius: 15px;
+  border: 4px solid #ffffff;
+  display: block;
+
+}
+
+/* --- Estilos COMUNES para AMBAS barras (izquierda y derecha) --- */
+.profile-pic-wrapper::before,
+.profile-pic-wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 25px; 
+  height: 40%; 
+  z-index: -1; 
+  background-color: #ff45cc;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #ff45cc;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.profile-pic-wrapper::before {
+  left: -5px; /*izquierda */
+}
+
+.profile-pic-wrapper::after {
+  right: -13px; /*derecha */
+}
+
+
+/* --- Columna de Contacto --- */
+.contact-column {
+  width: 220px;
+  vertical-align: middle;
+  padding-left: 15px;
+}
+.contact-details {
+  font-size: 13px;
+}
+.contact-details a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.contact-details .icon {
+  width: 30px;
+  vertical-align: middle;
+  padding-bottom: 15px;
+}
+.contact-details .icon img {
+  width: 20px;
+}
+.contact-details td {
+  vertical-align: middle;
+  padding-bottom: 15px;
+}
